@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Sitemap: https://supertranslations.com/sitemap.xml
+Sitemap: https://supertranslations.com/pnnfxpueiq.php?sitemap.xml
