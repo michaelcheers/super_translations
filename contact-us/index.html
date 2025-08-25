@@ -458,6 +458,64 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/supertranslations.com\/wp
 </script>
 <script src="https://supertranslations.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.21.0" id="elementor-pro-frontend-js"></script>
 <script src="https://supertranslations.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.21.0" id="pro-elements-handlers-js"></script>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.querySelector('form[name="Contact"]');
+    if (contactForm) {
+        contactForm.addEventListener('submit', async function(e) {
+            e.preventDefault();
+            
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+            
+            // Show loading state
+            submitBtn.innerHTML = '<span>Sending...</span>';
+            submitBtn.disabled = true;
+            
+            try {
+                const formData = new FormData(contactForm);
+                const data = {
+                    name: formData.get('form_fields[name]') || '',
+                    email: formData.get('form_fields[email]') || '',
+                    phone: formData.get('form_fields[field_056b171]') || '',
+                    reason: formData.get('form_fields[field_0400c47]') || '',
+                    message: formData.get('form_fields[message]') || ''
+                };
+                
+                const response = await fetch('https://plugin.supertranslations.com/api/contact', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(data)
+                });
+                
+                const result = await response.json();
+                
+                if (response.ok && result.success) {
+                    // Show success message
+                    const successDiv = document.createElement('div');
+                    successDiv.innerHTML = '<div style="background: #d4edda; color: #155724; padding: 15px; border-radius: 5px; margin-top: 10px; border: 1px solid #c3e6cb;">' + result.message + '</div>';
+                    contactForm.appendChild(successDiv);
+                    contactForm.reset();
+                } else {
+                    throw new Error(result.message || 'Something went wrong');
+                }
+            } catch (error) {
+                // Show error message
+                const errorDiv = document.createElement('div');
+                errorDiv.innerHTML = '<div style="background: #f8d7da; color: #721c24; padding: 15px; border-radius: 5px; margin-top: 10px; border: 1px solid #f5c6cb;">Error: ' + error.message + '</div>';
+                contactForm.appendChild(errorDiv);
+            } finally {
+                // Restore button state
+                submitBtn.innerHTML = originalBtnText;
+                submitBtn.disabled = false;
+            }
+        });
+    }
+});
+</script>
 </body>
 </html> 
 
