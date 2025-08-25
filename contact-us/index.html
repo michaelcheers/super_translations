@@ -463,8 +463,13 @@ var ElementorProFrontendConfig = {"ajaxurl":"https:\/\/supertranslations.com\/wp
 document.addEventListener('DOMContentLoaded', function() {
     const contactForm = document.querySelector('form[name="Contact"]');
     if (contactForm) {
+        // Remove any existing event listeners and add our own
+        contactForm.onsubmit = null;
+        
         contactForm.addEventListener('submit', async function(e) {
             e.preventDefault();
+            e.stopPropagation();
+            e.stopImmediatePropagation();
             
             const submitBtn = contactForm.querySelector('button[type="submit"]');
             const originalBtnText = submitBtn.innerHTML;
