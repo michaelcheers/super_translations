@@ -1715,3 +1715,442 @@ body {
         max-width: 100% !important;
     }
 }
+/* =============================================================================
+   AGGRESSIVE GLOBAL MOBILE RESET
+   Forces proper mobile layout by overriding all Elementor width constraints
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* =========================================================================
+       RESET ALL ELEMENTOR CONTAINERS TO FULL WIDTH
+       ========================================================================= */
+
+    /* Force all sections to be full width with minimal padding */
+    .elementor-section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+        max-width: 100% !important;
+    }
+
+    /* Force all containers to be full width and stack */
+    .elementor-section > .elementor-container {
+        max-width: 100% !important;
+        width: 100% !important;
+        flex-direction: column !important;
+        padding: 0 !important;
+    }
+
+    /* Force all columns to be full width */
+    .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-column > .elementor-widget-wrap,
+    .elementor-column > .elementor-element-populated {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 10px 0 !important;
+    }
+
+    /* Force all widgets to be full width */
+    .elementor-widget {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-widget-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Override any container widget width variables */
+    [class*="elementor-element"] {
+        --container-widget-width: 100% !important;
+        --container-widget-flex-grow: 1 !important;
+    }
+
+    /* =========================================================================
+       TEXT ALIGNMENT - LEFT ALIGN EVERYTHING
+       ========================================================================= */
+
+    /* Left-align all text content by default */
+    .elementor-widget-text-editor,
+    .elementor-widget-text-editor .elementor-widget-container,
+    .elementor-widget-text-editor p {
+        text-align: left !important;
+    }
+
+    /* Keep headings centered but ensure they don't break awkwardly */
+    .elementor-widget-heading .elementor-heading-title {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: none !important;
+    }
+
+    /* =========================================================================
+       REMOVE EXCESSIVE PADDING/MARGINS
+       ========================================================================= */
+
+    /* Remove excessive section padding */
+    .elementor-section {
+        padding-top: 30px !important;
+        padding-bottom: 30px !important;
+    }
+
+    /* Hero sections - minimal padding */
+    .elementor-section.elementor-section-height-min-height,
+    .elementor-section[data-settings*="background"] {
+        padding-top: 40px !important;
+        padding-bottom: 40px !important;
+        min-height: auto !important;
+    }
+
+    /* Inner sections */
+    .elementor-inner-section {
+        padding: 15px 0 !important;
+    }
+
+    /* Column spacing */
+    .elementor-column-gap-default > .elementor-column > .elementor-element-populated {
+        padding: 10px 0 !important;
+    }
+
+    /* =========================================================================
+       HOMEPAGE SPECIFIC - FEATURE CARDS
+       ========================================================================= */
+
+    /* Blue feature cards section */
+    .elementor-13 .elementor-element.elementor-element-5e22ff3 {
+        padding: 30px 15px !important;
+    }
+
+    /* Feature cards - stack and full width */
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9,
+    .elementor-13 .elementor-element.elementor-element-16ac313,
+    .elementor-13 .elementor-element.elementor-element-fc08494 {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-16ac313 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-fc08494 > .elementor-widget-wrap {
+        padding: 20px !important;
+        text-align: center !important;
+    }
+
+    /* Feature card text - readable */
+    .elementor-13 .elementor-element.elementor-element-311343a .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-b38e2c1 .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-70c8857 .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-5e79f0d .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-04e6d16 .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-e6b1cbb .elementor-widget-container {
+        text-align: center !important;
+    }
+
+    /* =========================================================================
+       HOMEPAGE - ABOUT SECTION
+       ========================================================================= */
+
+    .elementor-13 .elementor-element.elementor-element-e3b8139 {
+        padding: 20px 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-e3b8139 .elementor-widget-container {
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    /* =========================================================================
+       HOMEPAGE - SERVICES SECTION
+       ========================================================================= */
+
+    .elementor-13 .elementor-element.elementor-element-65109ad,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-65109ad > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e > .elementor-element-populated {
+        padding: 25px 20px !important;
+    }
+
+    /* Service card text - left align */
+    .elementor-13 .elementor-element.elementor-element-65109ad .elementor-widget-text-editor,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e .elementor-widget-text-editor {
+        text-align: left !important;
+    }
+
+    /* =========================================================================
+       HOMEPAGE - TESTIMONIALS
+       ========================================================================= */
+
+    .elementor-13 .elementor-element.elementor-element-867e8c8 {
+        padding: 30px 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-07972c7,
+    .elementor-13 .elementor-element.elementor-element-42bcd93,
+    .elementor-13 .elementor-element.elementor-element-fbfd974 {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-07972c7 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-42bcd93 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-fbfd974 > .elementor-element-populated {
+        padding: 20px !important;
+    }
+
+    /* Testimonial text - left align */
+    .elementor-widget-testimonial .elementor-testimonial-content {
+        text-align: left !important;
+        font-size: 15px !important;
+        line-height: 1.6 !important;
+    }
+
+    .elementor-widget-testimonial .elementor-testimonial-name {
+        font-size: 16px !important;
+    }
+
+    /* =========================================================================
+       ALL INNER PAGES - HERO SECTIONS
+       ========================================================================= */
+
+    /* About page hero */
+    .elementor-42 .elementor-element.elementor-element-913689f {
+        padding: 30px 15px !important;
+        min-height: auto !important;
+    }
+
+    /* Translations page hero */
+    .elementor-43 .elementor-element.elementor-element-5bbb6b4 {
+        padding: 30px 15px !important;
+        min-height: auto !important;
+    }
+
+    /* Interpreting page hero */
+    .elementor-44 .elementor-element.elementor-element-2027534 {
+        padding: 30px 15px !important;
+        min-height: auto !important;
+    }
+
+    /* Contact page hero */
+    .elementor-47 .elementor-element.elementor-element-b1edbe4 {
+        padding: 30px 15px !important;
+        min-height: auto !important;
+    }
+
+    /* =========================================================================
+       ABOUT PAGE CONTENT
+       ========================================================================= */
+
+    .elementor-42 .elementor-section {
+        padding: 25px 15px !important;
+    }
+
+    .elementor-42 .elementor-widget-text-editor {
+        text-align: left !important;
+    }
+
+    .elementor-42 .elementor-widget-text-editor .elementor-widget-container {
+        text-align: left !important;
+    }
+
+    /* =========================================================================
+       TRANSLATIONS PAGE - STEP CARDS
+       ========================================================================= */
+
+    /* How It Works section */
+    .elementor-43 .elementor-element.elementor-element-ed728ce {
+        padding: 25px 10px !important;
+    }
+
+    /* Step cards container */
+    .elementor-43 .elementor-element.elementor-element-3fe3d9c {
+        padding: 0 !important;
+    }
+
+    /* Step card columns */
+    .elementor-43 .elementor-element.elementor-element-2f66f8f,
+    .elementor-43 .elementor-element.elementor-element-35ffcc6,
+    .elementor-43 .elementor-element.elementor-element-9aebcfe {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+        padding: 0 10px !important;
+    }
+
+    /* Step card boxes */
+    .elementor-43 .elementor-element.elementor-element-bb62d2d,
+    .elementor-43 .elementor-element.elementor-element-b806d7f,
+    .elementor-43 .elementor-element.elementor-element-4745b92 {
+        padding: 20px !important;
+        min-height: auto !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-bb62d2d > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-b806d7f > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-4745b92 > .elementor-container {
+        flex-direction: column !important;
+        min-height: auto !important;
+        padding: 0 !important;
+    }
+
+    /* Step card text - must be full width and left aligned */
+    .elementor-43 .elementor-element.elementor-element-8d81e18,
+    .elementor-43 .elementor-element.elementor-element-b9587ec,
+    .elementor-43 .elementor-element.elementor-element-e00db65 {
+        width: 100% !important;
+        max-width: 100% !important;
+        --container-widget-width: 100% !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-8d81e18 .elementor-widget-container,
+    .elementor-43 .elementor-element.elementor-element-b9587ec .elementor-widget-container,
+    .elementor-43 .elementor-element.elementor-element-e00db65 .elementor-widget-container {
+        text-align: left !important;
+        width: 100% !important;
+    }
+
+    /* Translations content sections */
+    .elementor-43 .elementor-element.elementor-element-131f717,
+    .elementor-43 .elementor-element.elementor-element-7bf3e48,
+    .elementor-43 .elementor-element.elementor-element-24e2649,
+    .elementor-43 .elementor-element.elementor-element-cf7c069,
+    .elementor-43 .elementor-element.elementor-element-faea781 {
+        padding: 25px 15px !important;
+    }
+
+    .elementor-43 .elementor-widget-text-editor {
+        text-align: left !important;
+    }
+
+    /* =========================================================================
+       INTERPRETING PAGE CONTENT
+       ========================================================================= */
+
+    .elementor-44 .elementor-section {
+        padding: 25px 15px !important;
+    }
+
+    .elementor-44 .elementor-widget-text-editor {
+        text-align: left !important;
+    }
+
+    /* =========================================================================
+       CONTACT PAGE
+       ========================================================================= */
+
+    .elementor-47 .elementor-section {
+        padding: 25px 15px !important;
+    }
+
+    .elementor-47 .elementor-widget-text-editor {
+        text-align: left !important;
+    }
+
+    /* Form styling */
+    .elementor-47 .elementor-form .elementor-field-group {
+        width: 100% !important;
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-47 .elementor-field-textual {
+        padding: 12px 15px !important;
+        font-size: 16px !important;
+    }
+
+    /* =========================================================================
+       FOOTER
+       ========================================================================= */
+
+    .elementor-284 .elementor-section {
+        padding: 25px 15px !important;
+    }
+
+    .elementor-284 .elementor-column {
+        width: 100% !important;
+        margin-bottom: 20px !important;
+        text-align: center !important;
+    }
+
+    .elementor-284 .elementor-widget-text-editor {
+        text-align: center !important;
+    }
+
+    .elementor-284 .elementor-widget-heading {
+        text-align: center !important;
+    }
+
+    /* Social icons centered */
+    .elementor-284 .elementor-social-icons-wrapper {
+        justify-content: center !important;
+    }
+
+    /* Newsletter form */
+    .elementor-284 .elementor-form {
+        max-width: 100% !important;
+    }
+
+    .elementor-284 .elementor-field-group {
+        width: 100% !important;
+    }
+
+    /* =========================================================================
+       IMAGES - RESPONSIVE
+       ========================================================================= */
+
+    .elementor img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* =========================================================================
+       BUTTONS - TOUCH FRIENDLY
+       ========================================================================= */
+
+    .elementor-button {
+        min-height: 48px !important;
+        padding: 14px 24px !important;
+        font-size: 16px !important;
+        width: auto !important;
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+    }
+
+    /* =========================================================================
+       FIX INNER COLUMNS THAT CREATE NARROW TEXT
+       ========================================================================= */
+
+    .elementor-inner-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-inner-column > .elementor-element-populated {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* =========================================================================
+       PREVENT HORIZONTAL SCROLL
+       ========================================================================= */
+
+    .elementor-section-wrap,
+    .elementor-section-wrap > * {
+        max-width: 100vw !important;
+        overflow-x: hidden !important;
+    }
+}
