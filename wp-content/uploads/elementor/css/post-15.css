@@ -576,15 +576,25 @@ body {
        HERO IMAGE GRID - HIDE ON MOBILE (causes huge empty space)
        ------------------------------------------------------------------------- */
 
-    /* Hide the entire right column with hero images on mobile */
+    /* Hide the entire right column with hero images on mobile - use visibility to prevent layout shift */
     .elementor-13 .elementor-element.elementor-element-50bd807 {
         display: none !important;
+        width: 0 !important;
+        height: 0 !important;
+        overflow: hidden !important;
+        position: absolute !important;
     }
 
-    /* Also hide the inner image grid sections just in case */
+    /* Also hide the inner image grid sections */
     .elementor-13 .elementor-element.elementor-element-46a142f,
     .elementor-13 .elementor-element.elementor-element-c035398 {
         display: none !important;
+    }
+
+    /* Make left hero column take full width when right is hidden */
+    .elementor-13 .elementor-element.elementor-element-4813813 {
+        width: 100% !important;
+        max-width: 100% !important;
     }
 
     /* -------------------------------------------------------------------------
@@ -635,5 +645,472 @@ body {
 
     .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-widget-container {
         width: 100% !important;
+    }
+
+    /* =========================================================================
+       MODERN MOBILE OVERHAUL - AGGRESSIVE SPACING REDUCTION
+       Override post-13.css excessive desktop paddings
+       ========================================================================= */
+
+    /* ----- HEADER SECTION: Remove ALL min-heights ----- */
+    .elementor-15 .elementor-section,
+    .elementor-15 .elementor-section.elementor-section-height-min-height,
+    .elementor-15 .elementor-section.elementor-section-height-default,
+    .elementor-15 .elementor-element.elementor-element-d9f2fd3,
+    .elementor-15 .elementor-element.elementor-element-d9f2fd3.elementor-section-height-min-height {
+        padding: 5px 10px !important;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    .elementor-15 .elementor-container,
+    .elementor-15 .elementor-element.elementor-element-d9f2fd3 > .elementor-container {
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    /* Header inner section */
+    .elementor-15 .elementor-inner-section,
+    .elementor-15 .elementor-element.elementor-element-8a7e0a2 {
+        padding: 5px 10px !important;
+        min-height: 0 !important;
+    }
+
+    /* Header columns */
+    .elementor-15 .elementor-element.elementor-element-e878eba,
+    .elementor-15 .elementor-element.elementor-element-f0c688b,
+    .elementor-15 .elementor-element.elementor-element-e0557e5 {
+        padding: 0 !important;
+        margin: 0 5px !important;
+    }
+
+    .elementor-15 .elementor-widget-wrap {
+        padding: 0 !important;
+    }
+
+    .elementor-15 .elementor-widget-image img {
+        max-width: 100px !important;
+    }
+
+    /* ----- HERO SECTION: Override the 270px bottom padding completely ----- */
+    .elementor-13 .elementor-element.elementor-element-867e8c8 {
+        padding: 15px 15px 15px 15px !important;
+        min-height: 0 !important;
+        height: auto !important;
+    }
+
+    /* Hero container */
+    .elementor-13 .elementor-element.elementor-element-867e8c8 > .elementor-container {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hero column wrapper */
+    .elementor-13 .elementor-element.elementor-element-4813813 {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-4813813 > .elementor-element-populated {
+        margin: 0 !important;
+        padding: 0 15px !important;
+        --e-column-margin-right: 0 !important;
+        --e-column-margin-left: 0 !important;
+    }
+
+    /* Hero widget wrap */
+    .elementor-13 .elementor-element.elementor-element-4813813 .elementor-widget-wrap {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hero heading */
+    .elementor-13 .elementor-element.elementor-element-5dc409b {
+        margin: 0 0 10px 0 !important;
+    }
+
+    /* Hero text */
+    .elementor-13 .elementor-element.elementor-element-703ee28 {
+        margin: 0 0 15px 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-703ee28 > .elementor-widget-container {
+        margin: 0 !important;
+    }
+
+    /* Hero button */
+    .elementor-13 .elementor-element.elementor-element-d40f8eb {
+        margin: 0 !important;
+    }
+
+    /* Hero background overlay */
+    .elementor-13 .elementor-element.elementor-element-867e8c8 > .elementor-background-overlay {
+        min-height: 0 !important;
+    }
+
+    /* Hero inner section */
+    .elementor-13 .elementor-element.elementor-element-f0532c5 {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hero text container */
+    .elementor-13 .elementor-element.elementor-element-1c58abc > .elementor-element-populated {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Hero heading - tighter */
+    .elementor-13 .elementor-element.elementor-element-5dc409b {
+        margin-bottom: 10px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-5dc409b .elementor-widget-container {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hero description text - tighter */
+    .elementor-13 .elementor-element.elementor-element-703ee28 {
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-703ee28 .elementor-widget-container {
+        margin: 0 !important;
+    }
+
+    /* Hero CTA button - tighter */
+    .elementor-13 .elementor-element.elementor-element-d40f8eb {
+        margin-bottom: 0 !important;
+    }
+
+    /* ----- BLUE FEATURES CARD: Override negative margin, compact it ----- */
+    .elementor-13 .elementor-element.elementor-element-7d0a5c2 {
+        padding: 0 10px !important;
+        margin: 0 !important;
+        margin-top: 0 !important;
+    }
+
+    /* Features inner container */
+    .elementor-13 .elementor-element.elementor-element-8bca26d > .elementor-element-populated {
+        padding: 0 5px !important;
+    }
+
+    /* Features inner section */
+    .elementor-13 .elementor-element.elementor-element-5e22ff3 {
+        padding: 15px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Feature columns - stack tightly */
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9,
+    .elementor-13 .elementor-element.elementor-element-16ac313,
+    .elementor-13 .elementor-element.elementor-element-fc08494 {
+        margin-bottom: 10px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-16ac313 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-fc08494 > .elementor-widget-wrap {
+        padding: 8px !important;
+    }
+
+    /* Feature icons */
+    .elementor-13 .elementor-element.elementor-element-43202ce img,
+    .elementor-13 .elementor-element.elementor-element-768dab1 img,
+    .elementor-13 .elementor-element.elementor-element-111b14f img {
+        max-width: 40px !important;
+        height: 40px !important;
+        margin-bottom: 5px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-43202ce,
+    .elementor-13 .elementor-element.elementor-element-768dab1,
+    .elementor-13 .elementor-element.elementor-element-111b14f {
+        margin-bottom: 5px !important;
+    }
+
+    /* Feature headings - inline with icon style */
+    .elementor-13 .elementor-element.elementor-element-311343a .elementor-heading-title,
+    .elementor-13 .elementor-element.elementor-element-b38e2c1 .elementor-heading-title,
+    .elementor-13 .elementor-element.elementor-element-70c8857 .elementor-heading-title {
+        font-size: 16px !important;
+        margin: 0 !important;
+    }
+
+    /* ----- ABOUT US WRAPPER SECTION: Remove ALL spacing ----- */
+    .elementor-13 .elementor-element.elementor-element-dddef1c,
+    .elementor-13 section.elementor-element-dddef1c,
+    section[data-id="dddef1c"] {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* About Us container and column */
+    .elementor-13 .elementor-element.elementor-element-dddef1c > .elementor-container {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-0d05c9c {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-0d05c9c > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-0d05c9c > .elementor-widget-wrap {
+        padding: 0 10px !important;
+        margin: 0 !important;
+    }
+
+    /* About Us inner section - tight padding */
+    .elementor-13 .elementor-element.elementor-element-f4a9bf8,
+    .elementor-13 section.elementor-element-f4a9bf8,
+    section[data-id="f4a9bf8"] {
+        padding: 15px 10px 15px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Target inner column of f4a9bf8 */
+    .elementor-13 .elementor-element.elementor-element-8e6427f {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-8e6427f > .elementor-widget-wrap {
+        padding: 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Button element inside About Us */
+    .elementor-13 .elementor-element.elementor-element-4186bf3 {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* ----- SERVICES SECTION: Override 80px padding ----- */
+    .elementor-13 .elementor-element.elementor-element-23f1a76,
+    .elementor-13 section.elementor-element-23f1a76,
+    section[data-id="23f1a76"] {
+        padding: 15px 10px 15px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Services inner elements */
+    .elementor-13 .elementor-element.elementor-element-23f1a76 > .elementor-container {
+        padding: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-88f9028 {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-88f9028 > .elementor-widget-wrap {
+        padding: 10px !important;
+    }
+
+    /* Service cards - tighten spacing */
+    .elementor-13 .elementor-element.elementor-element-65109ad,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e {
+        margin-bottom: 10px !important;
+    }
+
+    /* ----- TESTIMONIALS SECTION: Override 114px padding ----- */
+    .elementor-13 .elementor-element.elementor-element-c5781f2,
+    .elementor-13 section.elementor-element-c5781f2,
+    section[data-id="c5781f2"] {
+        padding: 15px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Testimonials container */
+    .elementor-13 .elementor-element.elementor-element-c5781f2 > .elementor-container {
+        padding: 0 !important;
+    }
+
+    /* Tighten testimonial card internal spacing */
+    .elementor-13 .elementor-testimonial-content {
+        margin-bottom: 10px !important;
+        padding: 0 !important;
+    }
+
+    .elementor-13 .elementor-testimonial-meta {
+        padding: 0 !important;
+        margin: 0 !important;
+    }
+
+    /* Reduce space in testimonial cards */
+    .elementor-13 .elementor-widget-testimonial .elementor-widget-container {
+        padding: 15px !important;
+    }
+
+    .elementor-13 .elementor-testimonial-wrapper {
+        padding: 0 !important;
+    }
+
+    /* About Us heading container */
+    .elementor-13 .elementor-element.elementor-element-41cc2d2 > .elementor-widget-container {
+        padding: 5px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-41cc2d2 .elementor-heading-title {
+        font-size: 22px !important;
+    }
+
+    /* About Us text */
+    .elementor-13 .elementor-element.elementor-element-e3b8139 {
+        margin-bottom: 10px !important;
+    }
+
+    /* About Us button */
+    .elementor-13 .elementor-element.elementor-element-4186bf3 {
+        margin-bottom: 0 !important;
+    }
+
+    /* ----- SERVICES SECTION: Override 80px padding ----- */
+    .elementor-13 .elementor-element.elementor-element-23f1a76 {
+        padding: 20px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Services heading */
+    .elementor-13 .elementor-element.elementor-element-bc99789 {
+        margin-bottom: 10px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-bc99789 > .elementor-widget-container {
+        margin: 0 !important;
+        padding: 0 0 10px 0 !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-bc99789 .elementor-heading-title {
+        font-size: 22px !important;
+    }
+
+    /* Services cards horizontal padding override */
+    .elementor-13 .elementor-element.elementor-element-a92e0e4 {
+        padding: 0 10px !important;
+    }
+
+    /* Service cards */
+    .elementor-13 .elementor-element.elementor-element-65109ad,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e {
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-65109ad > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e > .elementor-element-populated {
+        padding: 15px !important;
+        margin: 0 5px 10px 5px !important;
+        --e-column-margin-right: 5px !important;
+        --e-column-margin-left: 5px !important;
+    }
+
+    /* Service card headings */
+    .elementor-13 .elementor-element.elementor-element-9b8fea2 > .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-268a101 > .elementor-widget-container {
+        margin: 0 !important;
+        padding: 0 0 10px 0 !important;
+    }
+
+    /* Service card text */
+    .elementor-13 .elementor-element.elementor-element-0931f61 > .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-95dd3f2 > .elementor-widget-container {
+        padding: 0 0 10px 0 !important;
+    }
+
+    /* Service buttons */
+    .elementor-13 .elementor-element.elementor-element-83316f1 > .elementor-widget-container,
+    .elementor-13 .elementor-element.elementor-element-798a1eb > .elementor-widget-container {
+        padding: 0 !important;
+    }
+
+    /* ----- TESTIMONIALS SECTION: Override 114px horizontal padding ----- */
+    .elementor-13 .elementor-element.elementor-element-c5781f2 {
+        padding: 20px 10px !important;
+        margin: 0 !important;
+    }
+
+    /* Testimonials heading */
+    .elementor-13 .elementor-element.elementor-element-04fa4fa {
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-04fa4fa .elementor-heading-title {
+        font-size: 22px !important;
+    }
+
+    /* Testimonial cards */
+    .elementor-13 .elementor-element.elementor-element-07972c7,
+    .elementor-13 .elementor-element.elementor-element-42bcd93,
+    .elementor-13 .elementor-element.elementor-element-fbfd974 {
+        margin-bottom: 15px !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-07972c7 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-42bcd93 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-fbfd974 > .elementor-element-populated {
+        padding: 15px !important;
+        margin: 0 5px !important;
+    }
+
+    /* ----- FOOTER: Compact ----- */
+    .elementor-284 .elementor-element.elementor-element-f94b49c {
+        padding: 25px 15px 15px 15px !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-237a267 {
+        padding: 0 0 20px 0 !important;
+    }
+
+    /* Footer logo */
+    .elementor-284 .elementor-element.elementor-element-82ca2ec img {
+        max-width: 180px !important;
+        margin: 0 auto 10px auto !important;
+        display: block !important;
+    }
+
+    /* Footer headings */
+    .elementor-284 .elementor-element.elementor-element-53d3f58,
+    .elementor-284 .elementor-element.elementor-element-a22c31b {
+        margin-bottom: 10px !important;
+    }
+
+    /* Contact info spacing */
+    .elementor-284 .elementor-element.elementor-element-da142fd {
+        margin-bottom: 15px !important;
+    }
+
+    /* Newsletter heading */
+    .elementor-284 .elementor-element.elementor-element-a22c31b .elementor-heading-title {
+        font-size: 20px !important;
+    }
+
+    /* Copyright section */
+    .elementor-284 .elementor-element.elementor-element-d72d306 {
+        padding: 10px 15px !important;
+    }
+
+    /* ----- GLOBAL: Remove all excessive margins/padding ----- */
+    .elementor-13 .elementor-section {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    .elementor-13 .elementor-top-section + .elementor-top-section {
+        margin-top: 0 !important;
+    }
+
+    /* Remove background overlay extra space */
+    .elementor-13 .elementor-background-overlay {
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Fix any columns with excessive margins */
+    .elementor-13 .elementor-column > .elementor-element-populated {
+        --e-column-margin-right: 0 !important;
+        --e-column-margin-left: 0 !important;
     }
 }
