@@ -355,58 +355,16 @@ body {
 }
 
 /* =============================================================================
-   TESTIMONIAL SECTION MOBILE FIXES
+   GLOBAL MOBILE FIXES - ALL PAGES
    ========================================================================== */
 
 @media (max-width: 767px) {
-    /* Fix testimonial section padding */
-    .elementor-13 .elementor-element.elementor-element-c5781f2 {
-        padding: 32px 15px !important;
-    }
+    /* -------------------------------------------------------------------------
+       TESTIMONIAL WIDGETS - SITE-WIDE
+       ------------------------------------------------------------------------- */
 
-    /* Fix "Client Testimonials" heading - prevent awkward word breaks */
-    .elementor-13 .elementor-element.elementor-element-04fa4fa .elementor-heading-title {
-        white-space: nowrap !important;
-        font-size: clamp(20px, 5vw, 28px) !important;
-    }
-
-    /* Fix testimonial cards container - make them full width */
-    .elementor-13 .elementor-element.elementor-element-c070adb > .elementor-container {
-        flex-direction: column !important;
-        padding: 0 10px !important;
-    }
-
-    /* Fix testimonial card columns - full width on mobile */
-    .elementor-13 .elementor-element.elementor-element-07972c7,
-    .elementor-13 .elementor-element.elementor-element-42bcd93,
-    .elementor-13 .elementor-element.elementor-element-fbfd974 {
-        width: 100% !important;
-        max-width: 100% !important;
-        margin: 0 0 20px 0 !important;
-    }
-
-    /* Fix testimonial card inner padding */
-    .elementor-13 .elementor-element.elementor-element-07972c7 > .elementor-element-populated,
-    .elementor-13 .elementor-element.elementor-element-42bcd93 > .elementor-element-populated,
-    .elementor-13 .elementor-element.elementor-element-fbfd974 > .elementor-element-populated {
-        margin: 0 0 20px 0 !important;
-        --e-column-margin-right: 0 !important;
-        --e-column-margin-left: 0 !important;
-        padding: 24px !important;
-        width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* Fix testimonial widget width */
-    .elementor-13 .elementor-element.elementor-element-2e42810,
-    .elementor-13 .elementor-element.elementor-element-9f986af,
-    .elementor-13 .elementor-element.elementor-element-a6d003c {
-        width: 100% !important;
-        max-width: 100% !important;
-    }
-
-    /* Fix testimonial content text - prevent one word per line */
-    .elementor-13 .elementor-testimonial-content {
+    /* Fix all testimonial content text - prevent one word per line */
+    .elementor-testimonial-content {
         width: 100% !important;
         max-width: 100% !important;
         font-size: 14px !important;
@@ -416,15 +374,15 @@ body {
         overflow-wrap: break-word !important;
     }
 
-    /* Fix testimonial wrapper */
-    .elementor-13 .elementor-testimonial-wrapper {
+    /* Fix all testimonial wrappers */
+    .elementor-testimonial-wrapper {
         width: 100% !important;
         max-width: 100% !important;
         padding: 0 !important;
     }
 
-    /* Fix customer names - prevent truncation */
-    .elementor-13 .elementor-testimonial-name {
+    /* Fix all customer names - prevent truncation */
+    .elementor-testimonial-name {
         width: 100% !important;
         white-space: normal !important;
         word-wrap: break-word !important;
@@ -433,24 +391,118 @@ body {
         line-height: 1.4 !important;
     }
 
-    /* Fix testimonial meta section */
-    .elementor-13 .elementor-testimonial-meta {
+    /* Fix all testimonial meta sections */
+    .elementor-testimonial-meta,
+    .elementor-testimonial-meta-inner,
+    .elementor-testimonial-details {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    .elementor-13 .elementor-testimonial-meta-inner {
+    /* Fix all testimonial widgets */
+    .elementor-widget-testimonial {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    .elementor-13 .elementor-testimonial-details {
+    /* -------------------------------------------------------------------------
+       COLUMN LAYOUT FIXES - SITE-WIDE
+       ------------------------------------------------------------------------- */
+
+    /* Force columns to stack and be full width on mobile */
+    .elementor-section .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-column {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    /* Fix column gap that was causing narrow cards */
-    .elementor-13 .elementor-element.elementor-element-c070adb .elementor-column-gap-custom .elementor-column > .elementor-element-populated {
+    /* Fix inner columns too */
+    .elementor-inner-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix column gaps that squeeze content */
+    .elementor-column-gap-custom .elementor-column > .elementor-element-populated,
+    .elementor-column-gap-default .elementor-column > .elementor-element-populated {
         padding: 20px !important;
+        margin: 0 0 20px 0 !important;
+        --e-column-margin-right: 0 !important;
+        --e-column-margin-left: 0 !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       TEXT AND HEADING FIXES - SITE-WIDE
+       ------------------------------------------------------------------------- */
+
+    /* Prevent awkward heading breaks */
+    .elementor-heading-title {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    /* Fix text editors */
+    .elementor-widget-text-editor {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       CARD AND BOX FIXES - SITE-WIDE
+       ------------------------------------------------------------------------- */
+
+    /* Fix any card-like elements with shadows */
+    .elementor-element-populated {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       SECTION PADDING FIXES - SITE-WIDE
+       ------------------------------------------------------------------------- */
+
+    .elementor-section {
+        padding-left: 15px !important;
+        padding-right: 15px !important;
+    }
+
+    .elementor-inner-section {
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       WIDGET CONTAINER FIXES - SITE-WIDE
+       ------------------------------------------------------------------------- */
+
+    .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       HOMEPAGE-SPECIFIC FIXES (elementor-13)
+       ------------------------------------------------------------------------- */
+
+    /* Fix "Client Testimonials" heading - prevent awkward word breaks */
+    .elementor-13 .elementor-element.elementor-element-04fa4fa .elementor-heading-title {
+        white-space: nowrap !important;
+        font-size: clamp(20px, 5vw, 28px) !important;
+    }
+
+    /* Fix testimonial section padding on homepage */
+    .elementor-13 .elementor-element.elementor-element-c5781f2 {
+        padding: 32px 15px !important;
     }
 }
