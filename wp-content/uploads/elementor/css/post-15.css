@@ -360,6 +360,59 @@ body {
 
 @media (max-width: 767px) {
     /* -------------------------------------------------------------------------
+       HEADER FIXES - KEEP LOGO AND MENU SIDE BY SIDE
+       ------------------------------------------------------------------------- */
+
+    /* Header container should stay as row, not stack */
+    .elementor-15 .elementor-section .elementor-container,
+    .elementor-15 .elementor-inner-section .elementor-container {
+        flex-direction: row !important;
+        flex-wrap: nowrap !important;
+        align-items: center !important;
+    }
+
+    /* Header columns stay side by side */
+    .elementor-15 .elementor-column {
+        width: auto !important;
+        max-width: none !important;
+        flex: 1 !important;
+    }
+
+    /* Logo column */
+    .elementor-15 .elementor-element.elementor-element-f0c688b {
+        flex: 0 0 auto !important;
+        width: auto !important;
+    }
+
+    /* Menu column - push to right */
+    .elementor-15 .elementor-element.elementor-element-e0557e5 {
+        flex: 1 !important;
+        display: flex !important;
+        justify-content: flex-end !important;
+    }
+
+    /* Header section padding */
+    .elementor-15 .elementor-section {
+        padding: 10px 15px !important;
+    }
+
+    /* Header inner section */
+    .elementor-15 .elementor-inner-section {
+        padding: 0 !important;
+    }
+
+    /* Logo size */
+    .elementor-15 .elementor-widget-image img {
+        max-width: 150px !important;
+        height: auto !important;
+    }
+
+    /* Hamburger menu positioning */
+    .elementor-15 .elementor-menu-toggle {
+        margin-left: auto !important;
+    }
+
+    /* -------------------------------------------------------------------------
        TESTIMONIAL WIDGETS - SITE-WIDE
        ------------------------------------------------------------------------- */
 
@@ -406,28 +459,37 @@ body {
     }
 
     /* -------------------------------------------------------------------------
-       COLUMN LAYOUT FIXES - SITE-WIDE
+       CONTENT COLUMN LAYOUT FIXES - EXCLUDE HEADER/FOOTER
        ------------------------------------------------------------------------- */
 
-    /* Force columns to stack and be full width on mobile */
-    .elementor-section .elementor-container {
+    /* Force CONTENT columns to stack (not header .elementor-15 or footer .elementor-284) */
+    .elementor-13 .elementor-section > .elementor-container,
+    .elementor-42 .elementor-section > .elementor-container,
+    .elementor-43 .elementor-section > .elementor-container,
+    .elementor-44 .elementor-section > .elementor-container {
         flex-direction: column !important;
     }
 
-    .elementor-column {
+    .elementor-13 .elementor-column,
+    .elementor-42 .elementor-column,
+    .elementor-43 .elementor-column,
+    .elementor-44 .elementor-column {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    /* Fix inner columns too */
-    .elementor-inner-column {
+    /* Fix inner columns for content pages */
+    .elementor-13 .elementor-inner-column,
+    .elementor-42 .elementor-inner-column,
+    .elementor-43 .elementor-inner-column,
+    .elementor-44 .elementor-inner-column {
         width: 100% !important;
         max-width: 100% !important;
     }
 
-    /* Fix column gaps that squeeze content */
-    .elementor-column-gap-custom .elementor-column > .elementor-element-populated,
-    .elementor-column-gap-default .elementor-column > .elementor-element-populated {
+    /* Fix column gaps that squeeze content - only for content areas */
+    .elementor-13 .elementor-column-gap-custom .elementor-column > .elementor-element-populated,
+    .elementor-13 .elementor-column-gap-default .elementor-column > .elementor-element-populated {
         padding: 20px !important;
         margin: 0 0 20px 0 !important;
         --e-column-margin-right: 0 !important;
@@ -457,38 +519,23 @@ body {
     }
 
     /* -------------------------------------------------------------------------
-       CARD AND BOX FIXES - SITE-WIDE
+       SECTION PADDING FIXES - CONTENT ONLY
        ------------------------------------------------------------------------- */
 
-    /* Fix any card-like elements with shadows */
-    .elementor-element-populated {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
-    }
-
-    /* -------------------------------------------------------------------------
-       SECTION PADDING FIXES - SITE-WIDE
-       ------------------------------------------------------------------------- */
-
-    .elementor-section {
+    .elementor-13 .elementor-section,
+    .elementor-42 .elementor-section,
+    .elementor-43 .elementor-section,
+    .elementor-44 .elementor-section {
         padding-left: 15px !important;
         padding-right: 15px !important;
     }
 
-    .elementor-inner-section {
+    .elementor-13 .elementor-inner-section,
+    .elementor-42 .elementor-inner-section,
+    .elementor-43 .elementor-inner-section,
+    .elementor-44 .elementor-inner-section {
         padding-left: 0 !important;
         padding-right: 0 !important;
-    }
-
-    /* -------------------------------------------------------------------------
-       WIDGET CONTAINER FIXES - SITE-WIDE
-       ------------------------------------------------------------------------- */
-
-    .elementor-widget-container {
-        width: 100% !important;
-        max-width: 100% !important;
-        box-sizing: border-box !important;
     }
 
     /* -------------------------------------------------------------------------
@@ -504,5 +551,89 @@ body {
     /* Fix testimonial section padding on homepage */
     .elementor-13 .elementor-element.elementor-element-c5781f2 {
         padding: 32px 15px !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       FOOTER FIXES - KEEP REASONABLE LAYOUT
+       ------------------------------------------------------------------------- */
+
+    .elementor-284 .elementor-section > .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-284 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .elementor-284 .elementor-inner-column {
+        width: 100% !important;
+        text-align: center !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       HERO IMAGE GRID - HIDE ON MOBILE (causes huge empty space)
+       ------------------------------------------------------------------------- */
+
+    /* Hide the entire right column with hero images on mobile */
+    .elementor-13 .elementor-element.elementor-element-50bd807 {
+        display: none !important;
+    }
+
+    /* Also hide the inner image grid sections just in case */
+    .elementor-13 .elementor-element.elementor-element-46a142f,
+    .elementor-13 .elementor-element.elementor-element-c035398 {
+        display: none !important;
+    }
+
+    /* -------------------------------------------------------------------------
+       NEWSLETTER FORM FIX - Email field and button layout
+       ------------------------------------------------------------------------- */
+
+    /* Override the absolute positioning of the button */
+    .elementor-284 .elementor-element.elementor-element-e4cd933 button {
+        position: relative !important;
+        right: auto !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-form-fields-wrapper {
+        flex-direction: column !important;
+        flex-wrap: wrap !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-field-group {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 10px !important;
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-field-group-email {
+        width: 100% !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-field-type-submit {
+        width: 100% !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-field {
+        border-radius: 10px !important;
+        width: 100% !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-button {
+        width: 100% !important;
+        border-radius: 10px !important;
+    }
+
+    /* Ensure form container has proper width */
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-form {
+        width: 100% !important;
+    }
+
+    .elementor-284 .elementor-element.elementor-element-e4cd933 .elementor-widget-container {
+        width: 100% !important;
     }
 }
