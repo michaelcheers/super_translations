@@ -1114,3 +1114,241 @@ body {
         --e-column-margin-left: 0 !important;
     }
 }
+
+/* =============================================================================
+   INNER PAGES MOBILE FIXES - ABOUT, TRANSLATIONS, INTERPRETING, CONTACT
+   These pages have massive hero padding (270-380px) that needs to be reduced
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* =========================================================================
+       ABOUT PAGE (elementor-42) - Hero has 270px padding top/bottom
+       ========================================================================= */
+
+    /* About hero section - reduce from 270px to 30px */
+    .elementor-42 .elementor-element.elementor-element-913689f {
+        padding: 30px 15px 30px 15px !important;
+        min-height: 0 !important;
+    }
+
+    /* About hero column padding - reduce from 120px horizontal to 15px */
+    .elementor-42 .elementor-element.elementor-element-a0a33f9 > .elementor-element-populated {
+        padding: 0 15px !important;
+    }
+
+    /* About content sections - reduce 120px horizontal padding */
+    .elementor-42 .elementor-element.elementor-element-d087948,
+    .elementor-42 .elementor-element.elementor-element-7a1c677,
+    .elementor-42 .elementor-element.elementor-element-9121e11,
+    .elementor-42 .elementor-element.elementor-element-5f3fce2 {
+        padding: 20px 15px !important;
+    }
+
+    /* About section containers */
+    .elementor-42 .elementor-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* About columns stack properly */
+    .elementor-42 .elementor-section > .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-42 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* =========================================================================
+       TRANSLATIONS PAGE (elementor-43) - Hero has 330px padding top/bottom
+       ========================================================================= */
+
+    /* Translations hero section - reduce from 330px to 30px */
+    .elementor-43 .elementor-element.elementor-element-5bbb6b4 {
+        padding: 30px 15px 30px 15px !important;
+        min-height: 0 !important;
+    }
+
+    /* Translations heading padding - reduce 16px padding */
+    .elementor-43 .elementor-element.elementor-element-f31efdf > .elementor-widget-container {
+        padding: 10px !important;
+    }
+
+    /* Translations "How it Works" section - reduce 80px to 20px */
+    .elementor-43 .elementor-element.elementor-element-ed728ce {
+        padding: 20px 15px !important;
+    }
+
+    /* Translations card sections - reduce 120px horizontal padding */
+    .elementor-43 .elementor-element.elementor-element-3fe3d9c,
+    .elementor-43 .elementor-element.elementor-element-131f717,
+    .elementor-43 .elementor-element.elementor-element-7bf3e48,
+    .elementor-43 .elementor-element.elementor-element-24e2649,
+    .elementor-43 .elementor-element.elementor-element-cf7c069,
+    .elementor-43 .elementor-element.elementor-element-faea781 {
+        padding: 15px 10px !important;
+    }
+
+    /* Translations content column padding */
+    .elementor-43 .elementor-element.elementor-element-e14ee2d > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-195f67e > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-acda432 > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-e802b42 > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-6319268 > .elementor-element-populated {
+        padding: 15px !important;
+    }
+
+    /* Translations info cards min-height - remove 363px min-height */
+    .elementor-43 .elementor-element.elementor-element-bb62d2d > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-b806d7f > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-4745b92 > .elementor-container {
+        min-height: 0 !important;
+    }
+
+    /* Translations section containers */
+    .elementor-43 .elementor-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Translations columns stack properly */
+    .elementor-43 .elementor-section > .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-43 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* =========================================================================
+       INTERPRETING SERVICES PAGE (elementor-44) - Hero has 340px padding
+       ========================================================================= */
+
+    /* Interpreting hero section - reduce from 340px to 30px */
+    .elementor-44 .elementor-element.elementor-element-2027534 {
+        padding: 30px 15px 30px 15px !important;
+        min-height: 0 !important;
+    }
+
+    /* Interpreting heading padding */
+    .elementor-44 .elementor-element.elementor-element-4e96559 > .elementor-widget-container {
+        padding: 10px !important;
+    }
+
+    /* Interpreting main content section - reduce 80px to 20px */
+    .elementor-44 .elementor-element.elementor-element-97a44fc {
+        padding: 20px 0 20px 0 !important;
+    }
+
+    /* Interpreting content section - reduce 120px horizontal padding */
+    .elementor-44 .elementor-element.elementor-element-ece83ca {
+        padding: 0 15px !important;
+    }
+
+    /* Interpreting section containers */
+    .elementor-44 .elementor-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Interpreting columns stack properly */
+    .elementor-44 .elementor-section > .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-44 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* =========================================================================
+       CONTACT PAGE (elementor-47) - Hero has 380px padding top/bottom!
+       ========================================================================= */
+
+    /* Contact hero section - reduce from 380px to 30px */
+    .elementor-47 .elementor-element.elementor-element-b1edbe4 {
+        padding: 30px 15px 30px 15px !important;
+        min-height: 0 !important;
+    }
+
+    /* Contact heading padding */
+    .elementor-47 .elementor-element.elementor-element-cd5e04a > .elementor-widget-container {
+        padding: 10px !important;
+    }
+
+    /* Contact form section - reduce 80px to 20px */
+    .elementor-47 .elementor-element.elementor-element-6e435bc {
+        padding: 20px 15px !important;
+    }
+
+    /* Contact intro text padding */
+    .elementor-47 .elementor-element.elementor-element-7457797 > .elementor-widget-container {
+        padding: 0 0 20px 0 !important;
+    }
+
+    /* Contact section containers */
+    .elementor-47 .elementor-section {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+
+    /* Contact columns stack properly */
+    .elementor-47 .elementor-section > .elementor-container {
+        flex-direction: column !important;
+    }
+
+    .elementor-47 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Contact form full width */
+    .elementor-47 .elementor-element.elementor-element-f4d688a > .elementor-container {
+        max-width: 100% !important;
+        padding: 0 15px !important;
+    }
+
+    /* =========================================================================
+       GLOBAL INNER PAGE FIXES
+       ========================================================================= */
+
+    /* All inner page headings - ensure readable sizing */
+    .elementor-42 .elementor-heading-title,
+    .elementor-43 .elementor-heading-title,
+    .elementor-44 .elementor-heading-title,
+    .elementor-47 .elementor-heading-title {
+        word-wrap: break-word !important;
+        overflow-wrap: break-word !important;
+        hyphens: auto !important;
+    }
+
+    /* All inner page images - ensure responsive */
+    .elementor-42 img,
+    .elementor-43 img,
+    .elementor-44 img,
+    .elementor-47 img {
+        max-width: 100% !important;
+        height: auto !important;
+    }
+
+    /* All inner page buttons - touch friendly */
+    .elementor-42 .elementor-button,
+    .elementor-43 .elementor-button,
+    .elementor-44 .elementor-button,
+    .elementor-47 .elementor-button {
+        min-height: 44px !important;
+        padding: 12px 20px !important;
+    }
+
+    /* All inner page text editors - full width */
+    .elementor-42 .elementor-widget-text-editor,
+    .elementor-43 .elementor-widget-text-editor,
+    .elementor-44 .elementor-widget-text-editor,
+    .elementor-47 .elementor-widget-text-editor {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
