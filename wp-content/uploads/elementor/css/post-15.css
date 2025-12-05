@@ -1352,3 +1352,366 @@ body {
         max-width: 100% !important;
     }
 }
+
+/* =============================================================================
+   CRITICAL TEXT WIDTH FIXES - ALL PAGES
+   Fix narrow text columns causing single-word lines
+   ========================================================================== */
+
+@media (max-width: 767px) {
+
+    /* =========================================================================
+       GLOBAL TEXT WIDTH FIX - Force all text to use full available width
+       ========================================================================= */
+
+    /* All widget containers should be full width */
+    .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+    }
+
+    /* All text editor widgets full width */
+    .elementor-widget-text-editor {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* All heading widgets full width */
+    .elementor-widget-heading {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-widget-heading .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    /* Fix widget wrap - ensure they don't constrain content */
+    .elementor-widget-wrap {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+
+    /* Fix inner columns - these are often the culprit for narrow text */
+    .elementor-inner-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-inner-column > .elementor-element-populated {
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* =========================================================================
+       HOMEPAGE (elementor-13) - SPECIFIC FIXES
+       ========================================================================= */
+
+    /* Blue feature cards container - remove excessive constraints */
+    .elementor-13 .elementor-element.elementor-element-5e22ff3 {
+        padding: 20px 10px !important;
+    }
+
+    /* Feature card columns - make them full width and centered */
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9,
+    .elementor-13 .elementor-element.elementor-element-16ac313,
+    .elementor-13 .elementor-element.elementor-element-fc08494 {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-6b3f1c9 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-16ac313 > .elementor-widget-wrap,
+    .elementor-13 .elementor-element.elementor-element-fc08494 > .elementor-widget-wrap {
+        padding: 15px 20px !important;
+        width: 100% !important;
+    }
+
+    /* Feature card headings - ensure readable */
+    .elementor-13 .elementor-element.elementor-element-311343a,
+    .elementor-13 .elementor-element.elementor-element-b38e2c1,
+    .elementor-13 .elementor-element.elementor-element-70c8857 {
+        width: 100% !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-311343a .elementor-heading-title,
+    .elementor-13 .elementor-element.elementor-element-b38e2c1 .elementor-heading-title,
+    .elementor-13 .elementor-element.elementor-element-70c8857 .elementor-heading-title {
+        font-size: 18px !important;
+        white-space: normal !important;
+    }
+
+    /* Service cards - fix text width */
+    .elementor-13 .elementor-element.elementor-element-65109ad > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-8a5ec3e > .elementor-element-populated {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    /* About Us section text - full width */
+    .elementor-13 .elementor-element.elementor-element-e3b8139 {
+        width: 100% !important;
+    }
+
+    .elementor-13 .elementor-element.elementor-element-e3b8139 .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Testimonial cards - ensure text doesn't wrap badly */
+    .elementor-13 .elementor-element.elementor-element-07972c7 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-42bcd93 > .elementor-element-populated,
+    .elementor-13 .elementor-element.elementor-element-fbfd974 > .elementor-element-populated {
+        width: 100% !important;
+        padding: 20px !important;
+    }
+
+    /* =========================================================================
+       TRANSLATIONS PAGE (elementor-43) - SPECIFIC FIXES
+       ========================================================================= */
+
+    /* Fix the page title - prevent awkward break */
+    .elementor-43 .elementor-element.elementor-element-f31efdf .elementor-heading-title {
+        font-size: 36px !important;
+        white-space: nowrap !important;
+        hyphens: none !important;
+    }
+
+    /* How it Works section - fix narrow numbered steps */
+    .elementor-43 .elementor-element.elementor-element-ed728ce {
+        padding: 20px 10px !important;
+    }
+
+    /* The 3-column cards for How it Works - make full width */
+    .elementor-43 .elementor-element.elementor-element-3fe3d9c {
+        padding: 0 10px !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-2f66f8f,
+    .elementor-43 .elementor-element.elementor-element-35ffcc6,
+    .elementor-43 .elementor-element.elementor-element-9aebcfe {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin-bottom: 20px !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-2f66f8f > .elementor-widget-wrap,
+    .elementor-43 .elementor-element.elementor-element-35ffcc6 > .elementor-widget-wrap,
+    .elementor-43 .elementor-element.elementor-element-9aebcfe > .elementor-widget-wrap {
+        width: 100% !important;
+        padding: 15px !important;
+    }
+
+    /* Info cards (bb62d2d, b806d7f, 4745b92) - full width text */
+    .elementor-43 .elementor-element.elementor-element-bb62d2d,
+    .elementor-43 .elementor-element.elementor-element-b806d7f,
+    .elementor-43 .elementor-element.elementor-element-4745b92 {
+        padding: 15px !important;
+        margin-bottom: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-bb62d2d > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-b806d7f > .elementor-container,
+    .elementor-43 .elementor-element.elementor-element-4745b92 > .elementor-container {
+        min-height: auto !important;
+        padding: 10px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        flex-direction: column !important;
+    }
+
+    /* CRITICAL FIX: The numbered cards inner columns and text */
+    .elementor-43 .elementor-element.elementor-element-bb62d2d .elementor-column,
+    .elementor-43 .elementor-element.elementor-element-b806d7f .elementor-column,
+    .elementor-43 .elementor-element.elementor-element-4745b92 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-bb62d2d .elementor-widget-container,
+    .elementor-43 .elementor-element.elementor-element-b806d7f .elementor-widget-container,
+    .elementor-43 .elementor-element.elementor-element-4745b92 .elementor-widget-container {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-bb62d2d .elementor-widget-text-editor,
+    .elementor-43 .elementor-element.elementor-element-b806d7f .elementor-widget-text-editor,
+    .elementor-43 .elementor-element.elementor-element-4745b92 .elementor-widget-text-editor {
+        width: 100% !important;
+        max-width: 100% !important;
+        --container-widget-width: 100% !important;
+    }
+
+    /* Text widgets in the numbered cards - ensure full width */
+    .elementor-43 .elementor-element.elementor-element-8f181d0,
+    .elementor-43 .elementor-element.elementor-element-8d81e18,
+    .elementor-43 .elementor-element.elementor-element-bf0a041,
+    .elementor-43 .elementor-element.elementor-element-538bbbc,
+    .elementor-43 .elementor-element.elementor-element-b9587ec,
+    .elementor-43 .elementor-element.elementor-element-f32f738,
+    .elementor-43 .elementor-element.elementor-element-6545790,
+    .elementor-43 .elementor-element.elementor-element-e00db65,
+    .elementor-43 .elementor-element.elementor-element-a2abd44 {
+        width: 100% !important;
+        max-width: 100% !important;
+        --container-widget-width: 100% !important;
+    }
+
+    /* Force all text editor widget containers in numbered cards to be 100% */
+    .elementor-43 .elementor-element.elementor-element-8d81e18,
+    .elementor-43 .elementor-element.elementor-element-b9587ec,
+    .elementor-43 .elementor-element.elementor-element-e00db65 {
+        width: 100% !important;
+        max-width: 100% !important;
+        --container-widget-width: 100% !important;
+        --container-widget-flex-grow: 1 !important;
+    }
+
+    /* Content sections with images - stack and full width */
+    .elementor-43 .elementor-element.elementor-element-131f717,
+    .elementor-43 .elementor-element.elementor-element-7bf3e48,
+    .elementor-43 .elementor-element.elementor-element-24e2649,
+    .elementor-43 .elementor-element.elementor-element-cf7c069,
+    .elementor-43 .elementor-element.elementor-element-faea781 {
+        padding: 20px 10px !important;
+    }
+
+    /* Image and text columns in how it works sections */
+    .elementor-43 .elementor-element.elementor-element-1d850ce,
+    .elementor-43 .elementor-element.elementor-element-e14ee2d,
+    .elementor-43 .elementor-element.elementor-element-9214adb,
+    .elementor-43 .elementor-element.elementor-element-195f67e,
+    .elementor-43 .elementor-element.elementor-element-ad927a7,
+    .elementor-43 .elementor-element.elementor-element-acda432,
+    .elementor-43 .elementor-element.elementor-element-3162d77,
+    .elementor-43 .elementor-element.elementor-element-e802b42,
+    .elementor-43 .elementor-element.elementor-element-843acc2,
+    .elementor-43 .elementor-element.elementor-element-6319268 {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-43 .elementor-element.elementor-element-e14ee2d > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-195f67e > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-acda432 > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-e802b42 > .elementor-element-populated,
+    .elementor-43 .elementor-element.elementor-element-6319268 > .elementor-element-populated {
+        padding: 20px 15px !important;
+        width: 100% !important;
+    }
+
+    /* Bottom content sections - How does it work, Confidentiality, etc */
+    .elementor-43 .elementor-widget-heading .elementor-heading-title {
+        font-size: 22px !important;
+    }
+
+    .elementor-43 .elementor-widget-text-editor {
+        width: 100% !important;
+    }
+
+    .elementor-43 .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 5px !important;
+    }
+
+    /* =========================================================================
+       ABOUT PAGE (elementor-42) - SPECIFIC FIXES
+       ========================================================================= */
+
+    /* Content sections full width */
+    .elementor-42 .elementor-widget-wrap {
+        width: 100% !important;
+        padding: 10px 15px !important;
+    }
+
+    .elementor-42 .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* =========================================================================
+       INTERPRETING PAGE (elementor-44) - SPECIFIC FIXES
+       ========================================================================= */
+
+    /* Fix the page title - reduce font size to prevent awkward break */
+    .elementor-44 .elementor-element.elementor-element-4e96559 .elementor-heading-title {
+        font-size: 32px !important;
+        line-height: 1.2 !important;
+        hyphens: none !important;
+    }
+
+    .elementor-44 .elementor-widget-wrap {
+        width: 100% !important;
+        padding: 10px 15px !important;
+    }
+
+    .elementor-44 .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* =========================================================================
+       CONTACT PAGE (elementor-47) - SPECIFIC FIXES
+       ========================================================================= */
+
+    .elementor-47 .elementor-widget-wrap {
+        width: 100% !important;
+        padding: 10px 15px !important;
+    }
+
+    .elementor-47 .elementor-widget-text-editor .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Form fields full width */
+    .elementor-47 .elementor-field-group {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+
+    .elementor-47 .elementor-field {
+        width: 100% !important;
+    }
+
+    /* =========================================================================
+       FOOTER (elementor-284) - FIX TEXT WIDTH
+       ========================================================================= */
+
+    .elementor-284 .elementor-widget-wrap {
+        width: 100% !important;
+        padding: 10px 15px !important;
+    }
+
+    .elementor-284 .elementor-widget-text-editor .elementor-widget-container,
+    .elementor-284 .elementor-widget-heading .elementor-widget-container {
+        width: 100% !important;
+        padding: 0 !important;
+    }
+
+    /* Footer columns - proper stacking */
+    .elementor-284 .elementor-column {
+        width: 100% !important;
+        max-width: 100% !important;
+        text-align: center !important;
+    }
+
+    .elementor-284 .elementor-inner-column {
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+}
